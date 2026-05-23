@@ -5,12 +5,32 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Wala Katha",
+      "url": "/categories/wala-katha"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Wal katha",
+      "url": "/categories/wal-katha"
+    },
+    {
+      "name": "Aluth Katha",
+      "url": "/categories/aluth-katha"
+    },
+    {
+      "name": "Amma Katha",
+      "url": "/categories/amma-katha"
+    },
+    {
+      "name": "Aka Katha",
+      "url": "/categories/aka-katha"
+    },
+    {
+      "name": "Paule Katha",
+      "url": "/categories/paule-katha"
+    },
+    {
+      "name": "Parana Katha",
+      "url": "/categories/parana-katha"
     },
     {
       "name": "Pages",
@@ -18,20 +38,12 @@
       "hasChildren": true,
       "children": [
         {
-          "name": "Authors",
-          "url": "/authors"
+          "name": "About Us",
+          "url": "/about"
         },
         {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Contact Us",
+          "url": "/contact"
         },
         {
           "name": "Privacy Policy",
@@ -42,16 +54,12 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "About Us",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Contact Us",
       "url": "/contact"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
     },
     {
       "name": "Privacy Policy",
