@@ -9,8 +9,8 @@
       "url": "/categories/wala-katha"
     },
     {
-      "name": "Wal katha",
-      "url": "/categories/wal-katha"
+      "name": "Sinhala Novels",
+      "url": "/categories/sinhala-novels"
     },
     {
       "name": "Aluth Katha",
@@ -29,8 +29,8 @@
       "url": "/categories/paule-katha"
     },
     {
-      "name": "Parana Katha",
-      "url": "/categories/parana-katha"
+      "name": "Keti Katha",
+      "url": "/categories/keti-katha"
     },
     {
       "name": "Pages",
@@ -40,6 +40,10 @@
         {
           "name": "About Us",
           "url": "/about"
+        },
+        {
+          "name": "Authors",
+          "url": "/authors"
         },
         {
           "name": "Contact Us",
