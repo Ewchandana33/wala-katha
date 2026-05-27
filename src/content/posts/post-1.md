@@ -4,7 +4,7 @@ meta_title: ""
 description: "meta description"
 date: 2025-04-01T05:00:00Z
 image: "/images/posts/01.jpg"
-categories: ["art"]
+categories: ["wal katha"]
 authors: ["wal-katha"]
 tags: ["walkatha", "wala katha"]
 draft: false
