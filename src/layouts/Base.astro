@@ -19,7 +19,7 @@ export interface Props {
   title?: string;
   meta_title?: string;
   description?: string;
-  image?: string;
+  image?: any; // Astro Content Collection Image Object එකක් ගන්න නිසා string වෙනුවට any කළා
   noindex?: boolean;
   canonical?: string;
 }
@@ -43,18 +43,29 @@ const calculatedDescription = plainify(
 );
 
 // Auto-fill Keywords for Search Engines
-const siteKeywords = "Wal Katha, wala katha, wela katha, walkatha, සිංහල වැල කතා, sinhala wal katha, Wela kathaa, Sex Katha, Sex Stories, Wal Stories, Sinhala Sex, Sinhala Porn, Free Download, Sri Lanka, new wela katha, wal katha 9, sinhala wela katha, wal Katha sinhalen, Ammai Puthai, Paule wela Katha, Sinhala wal wala wela katha, amma katha, family katha, suparima katha, walma, wal katha kari katha, eha gedara, akka katha, malli katha, seeya katha, husband katha, wife katha, hora katha, New Wal Katha blogs, wal chithra katha, wal katha free, sinhala sex katha, sinhala wal katha blog, nangita hukala, campus, amma malli, akka, birinda, wife lingika paula, rasama, rasa wal katha";
+const siteKeywords = "Wal Katha, wala katha, wela katha, walkatha, සිංහල වැල කතා, sinhala wal katha, Wela kathaa, Sex Katha, Sex Stories, Wal Stories, Sinhala Sex, Sinhala Porn, Free Download, Sri Lanka";
 
-// Dynamic Canonical URL calculation
-const currentCanonical = canonical ? canonical : `${config.site.base_url}${Astro.url.pathname}`;
+// Trailing Slash එක නිරාකරණය කර පිරිසිදු Canonical URL එකක් හැදීම
+const cleanPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const currentCanonical = canonical ? canonical : `${config.site.base_url}${cleanPath}`;
 
-// --- 🖼️ 100% SAFE ABSOLUTE IMAGE URL GENERATOR ---
-// පින්තූරේ ලින්ක් එක බොට්ස්ලට කියවන්න පුළුවන් සම්පූර්ණ (Absolute) එකක් බවට පත් කිරීම
-const finalImageUrl = image 
-  ? (image.startsWith('http') ? image : `${config.site.base_url}${image.startsWith('/') ? image : '/' + image}`) 
-  : `${config.site.base_url}${config.metadata.meta_image.startsWith('/') ? config.metadata.meta_image : '/' + config.metadata.meta_image}`;
+// --- 🖼️ 2026 SMART ABSOLUTE IMAGE EXTRACTOR ---
+let finalImageUrl = "";
+if (image) {
+  if (typeof image === 'string') {
+    finalImageUrl = image.startsWith('http') ? image : `${config.site.base_url}${image.startsWith('/') ? image : '/' + image}`;
+  } else if (image.src) {
+    // Astro විසින් Object එකක් විදිහට ඉම්පෝට් කරන පින්තූර වල නියම ලින්ක් එක ගැනීම
+    finalImageUrl = image.src.startsWith('http') ? image.src : `${config.site.base_url}${image.src.startsWith('/') ? image.src : '/' + image.src}`;
+  }
+}
 
-// පිටුව කතාවක්ද නැත්නම් සාමාන්‍ය පේජ් එකක්ද කියා වෙන් කර හඳුනා ගැනීම
+// පින්තූරයක් නැත්නම් Default වැටෙන එක 100% සුරක්ෂිත කිරීම
+if (!finalImageUrl) {
+  const defaultImg = config.metadata.meta_image;
+  finalImageUrl = defaultImg.startsWith('http') ? defaultImg : `${config.site.base_url}${defaultImg.startsWith('/') ? defaultImg : '/' + defaultImg}`;
+}
+
 const isArticle = Astro.url.pathname !== "/" && !Astro.url.pathname.startsWith("/categories") && !Astro.url.pathname.startsWith("/tags") && !Astro.url.pathname.startsWith("/search");
 ---
 
@@ -64,16 +75,8 @@ const isArticle = Astro.url.pathname !== "/" && !Astro.url.pathname.startsWith("
     <link rel="shortcut icon" href={config.site.favicon} />
     <meta name="theme-name" content="bookworm-light-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#fff"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000"
-    />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -84,10 +87,7 @@ const isArticle = Astro.url.pathname !== "/" && !Astro.url.pathname.startsWith("
       })
     }
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
     <title>{calculatedTitle}</title>
     <meta name="description" content={calculatedDescription} />
