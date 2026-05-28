@@ -13,7 +13,11 @@ const { authors } = Astro.props;
 <div class="row justify-center">
   {
     authors.map((author) => (
-      <div class="col-12 mb-8 sm:col-6 md:col-4">
+      <div 
+        class="col-12 mb-8 sm:col-6 md:col-4"
+        itemscope 
+        itemtype="https://schema.org/Person"
+      >
         {author.data.image && (
           <div class="mb-4">
             <Image
@@ -21,24 +25,32 @@ const { authors } = Astro.props;
               alt={author.data.title}
               height={150}
               width={150}
+              itemprop="image"
+              loading="lazy"
+              decoding="async"
               class="mx-auto rounded-lg"
             />
           </div>
         )}
         <h3 class="h4 mt-8 mb-3">
           <a
-            href={`/authors/${author.id}`}
+            href={`/authors/${author.id}/`} // URL වෙනස් නොකර අගට Trailing Slash පමණක් යෙදුවා
+            itemprop="url"
             class="block hover:text-primary transition duration-200"
           >
-            {author.data.title}
+            <span itemprop="name">{author.data.title}</span>
           </a>
         </h3>
         {author.body && (
-          <p class="mb-3" set:text={markdownify(author.body.slice(0, 100))} />
+          <p 
+            class="mb-3" 
+            itemprop="description" 
+            set:text={markdownify(author.body.slice(0, 100))} 
+          />
         )}
 
         <a
-          href={`/authors/${author.id}`}
+          href={`/authors/${author.id}/`}
           class="inline-flex items-center text-primary transition duration-200 hover:opacity-70"
         >
           Read More <BsArrowRightCircle className="inline ml-2" />
