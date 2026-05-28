@@ -6,8 +6,8 @@ import {
   IoLogoPinterest,
   IoLogoTwitter,
   IoLogoWhatsapp,
-  IoLogoTelegram, // Telegram අයිකන් එක උඩින් ඉම්පෝට් කළා
 } from "react-icons/io5";
+import { FaTelegram } from "react-icons/fa6"; // ටෙලිග්‍රෑම් වෙනුවෙන් නිවැරදිම ලයිබ්‍රරි එකෙන් අයිකන් එක ගත්තා
 
 const { base_url } = config.site;
 const { title, description, slug, className } = Astro.props;
@@ -54,7 +54,7 @@ const { title, description, slug, className } = Astro.props;
       target="_blank"
       rel="noreferrer noopener nofollow"
     >
-      <IoLogoTelegram />
+      <FaTelegram />
     </a>
   </li>
 
