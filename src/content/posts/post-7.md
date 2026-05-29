@@ -1,23 +1,25 @@
 ---
-title: "How to make toys from old Olarpaper"
-meta_title: ""
-description: "meta description"
-date: 2025-04-07T05:00:00Z
+title: "පරණ කොළ වලින් ලස්සන සෙල්ලම් බඩු හදමු - Step by Step Guide"
+meta_title: "පරණ කොළ වලින් සෙල්ලම් බඩු හදන ලේසි ක්‍රම | Wala Katha Art"
+description: "ගෙදර තියෙන පරණ පත්තර සහ කොළ ඉවත නොදමා ඒවායින් දරුවන්ට ලස්සන සෙල්ලම් බඩු සාදාගන්නා ආකාරය පියවරෙන් පියවර රූප සටහන් සමඟින් ඉගෙන ගන්න."
+date: 2026-05-29T12:00:00Z
 image: "/images/posts/01.jpg"
 categories: ["art"]
-authors: ["Mark Dinn"]
-tags: ["diy", "toy"]
+authors: ["chandana"] # ඔයාගේ ලේඛකයාගේ නම මෙතනට
+tags: ["diy", "toy", "crafts"]
 draft: false
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+පත්තර සහ පරණ කඩදාසි කියන්නේ අපේ ගෙවල් වල නිකරුණේ අහක දමන දේවල්. හැබැයි පොඩි නිර්මාණශීලීත්වයක් පාවිච්චි කළොත් මේවායින් අපූරු සෙල්ලම් බඩු හදන්න පුළුවන්. 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+මෙම ලිපියෙන් අපි කතා කරන්නේ ඉතාම අඩු වියදමකින් නිවසේදීම කඩදාසි සෙල්ලම් බඩු සාදාගන්නා ආකාරය ගැනයි.
 
-## Creative Design
+## අවශ්‍ය වන ද්‍රව්‍ය (Materials Needed)
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+කඩදාසි නිර්මාණයක් ආරම්භ කිරීමට පෙර අපට ප්‍රධාන වශයෙන් පරණ පුවත්පත්, මැලියම් (Glue), සහ කතුරක් අවශ්‍ය වෙනවා.
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+> **විශේෂ උපදෙස:** කතුර පාවිච්චි කිරීමේදී කුඩා දරුවන් සිටී නම් වැඩිහිටි ඔබ අසලින් සිටීම ඉතාමත් වැදගත් වේ.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+## පියවරෙන් පියවර සෙල්ලම් බඩු සාදමු
+
+පළමුවෙන්ම කොළ සමාන කොටස් වලට කපා ගන්න. ඉන්පසු ඒවා රෝල් කර ගනිමින් ඔබට අවශ්‍ය හැඩතල මතු කරගත හැක. මේ පිළිබඳ සම්පූර්ණ වීඩියෝවක් ඉදිරියේදී අපගේ වෙබ් අඩවියට ඇතුළත් කිරීමට බලාපොරොත්තු වන්න.
